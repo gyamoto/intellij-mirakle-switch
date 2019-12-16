@@ -22,9 +22,7 @@
          on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <projectService serviceImplementation="com.gyamoto.persistent.SwitchStateProvider"/>
-    </extensions>
+    <extensions defaultExtensionNs="com.intellij"/>
 
     <actions>
         <!-- Switch in Toolbar -->
