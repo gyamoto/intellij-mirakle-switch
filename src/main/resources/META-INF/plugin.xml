@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>com.gyamoto.mirakle.switch</id>
+    <name>Mirakle Switch</name>
+    <version>0.1</version>
+    <vendor email="faurndorlnightray@gmail.com" url="https://gyamoto.com">Kohei Yamamoto</vendor>
+
+    <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService serviceImplementation="com.gyamoto.persistent.SwitchStateProvider"/>
+    </extensions>
+
+    <actions>
+        <!-- Switch in Toolbar -->
+        <group id="MirakleSwitch" text="Mirakle Settings (ON/OFF)">
+            <separator/>
+            <action class="com.gyamoto.SwitchAction" id="Mirakle.Switch" icon="/icons/launch.png" popup="true"/>
+            <add-to-group group-id="ToolbarRunGroup" anchor="last"/>
+        </group>
+    </actions>
+
+</idea-plugin>
